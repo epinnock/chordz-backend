@@ -1,3 +1,4 @@
+sudo apt-get install g++
 pip3 install --upgrade cython
 git clone https://github.com/Music-and-Culture-Technology-Lab/omnizart.git
 cd omnizart
