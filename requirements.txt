@@ -38,7 +38,6 @@ norbert==0.2.1
 numba==0.55.2
 numpy==1.19.5
 oauthlib==3.2.1
-omnizart @ file:///workspace/chordz-backend/omnizart
 opt-einsum==3.3.0
 pandas==1.4.4
 Pillow==8.4.0
