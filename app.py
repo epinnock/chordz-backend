@@ -49,7 +49,10 @@ def home():
   response = make_response("Backend for Chordz on gCloud")
   response.headers.add("Access-Control-Allow-Origin", "*")
   return response
-
+'''flask endpoint
+  @param ytl= string youtube link
+  @response [{chord:string,start:float,stop:float}]
+'''
 @app.route("/yt")
 def yt(): 
     yt_link = request.args.get('ytl')
@@ -62,3 +65,5 @@ def yt():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=80)
+    get_from_cache("https://www.youtube.com/watch?v=ozUZBCSfl9c")
+
