@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home(): 
-  response = make_response("Backend for Chordz")
+  response = make_response("Backend for Chordz on gCloud")
   response.headers.add("Access-Control-Allow-Origin", "*")
   return response
 
