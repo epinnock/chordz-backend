@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+#Gcloud
+google-cloud-sdk/*
+google-cloud-cli-403.0.0-linux-x86_64.tar.gz
