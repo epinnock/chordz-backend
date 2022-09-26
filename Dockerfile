@@ -27,7 +27,9 @@ ENV APP_HOME /app
 WORKDIR $APP_HOME
 COPY . ./
 
-
+RUN apt-get update -y && apt-get install -y \
+  libsndfile1 \
+  && apt-get clean
 # Install production dependencies.
 RUN bash ./scripts/setup_omnizart.sh
 RUN pip install --no-cache-dir -r requirements.txt
