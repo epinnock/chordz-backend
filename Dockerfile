@@ -33,6 +33,7 @@ RUN apt-get update -y && apt-get install -y \
 # Install production dependencies.
 RUN bash ./scripts/setup_omnizart.sh
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -U numpy
 RUN python test.py
 
 # Run the web service on container startup. Here we use the gunicorn
