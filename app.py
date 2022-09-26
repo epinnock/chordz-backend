@@ -48,7 +48,7 @@ def hanldeResponse(yt_link):
       response = jsonify(csv_to_json(get_from_cache(yt_link)))
       response.headers.add("Access-Control-Allow-Origin", "*")
       return response
-    except FileNotFoundError:
+  except FileNotFoundError:
       abort(404)
 
 
