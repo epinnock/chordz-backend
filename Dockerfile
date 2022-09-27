@@ -28,7 +28,7 @@ WORKDIR $APP_HOME
 COPY . ./
 
 RUN apt-get update -y && apt-get install -y \
-  libsndfile1 \
+  libsndfile1 ffmpeg \
   && apt-get clean
 # Install production dependencies.
 RUN bash ./scripts/setup_omnizart.sh
