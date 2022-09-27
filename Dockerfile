@@ -34,7 +34,7 @@ RUN apt-get update -y && apt-get install -y \
 RUN bash ./scripts/setup_omnizart.sh
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install -U numpy
-RUN pip install click==8.0.4
+RUN pip install click==7.1.2
 RUN python test.py
 
 # Run the web service on container startup. Here we use the gunicorn
