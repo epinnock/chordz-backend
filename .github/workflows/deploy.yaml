@@ -4,14 +4,14 @@ name: deploy-to-cloud-run
 on:
   push:
     branches:
-      - glcoud
+      - github-actions-cicd
 jobs:
   setup-build-publish-deploy:
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@gcloud
+      uses: actions/checkout@github-actions-cicd
 
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
