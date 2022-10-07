@@ -1,3 +1,4 @@
+'''
 from flask import Flask,send_file,send_from_directory,jsonify,request,make_response
 from omnizart.chord import app as capp
 from pytube import YouTube
@@ -51,7 +52,7 @@ def hanldeResponse(yt_link):
   except FileNotFoundError:
       abort(404)
 
-
+'''
 app = Flask(__name__)
 
 @app.route("/")
@@ -60,20 +61,13 @@ def home():
   response.headers.add("Access-Control-Allow-Origin", "*")
   return response
 
-'''flask endpoint to test service
-  @param None
-  @response [{chord:string,start:float,stop:float}]
-'''
 
-@app.route("/test")
-def test_run():
-  return hanldeResponse("https://www.youtube.com/watch?v=uq-gYOrU8bA")
 
 
 '''flask endpoint
   @param ytl= string youtube link
   @response [{chord:string,start:float,stop:float}]
-'''
+
 @app.route("/yt")
 def yt(): 
     yt_link = request.args.get('ytl')
@@ -83,8 +77,7 @@ def yt():
       return response
     except FileNotFoundError:
       abort(404)
-
+'''
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=80)
-    get_from_cache("https://www.youtube.com/watch?v=ozUZBCSfl9c")
 
